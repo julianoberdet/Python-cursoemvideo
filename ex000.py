@@ -1,4 +1,4 @@
-d = input('Dia: ')
+d = int(input('Dia: '))
 m = input('Mês: ')
-a = input('Ano: ')
+a = int(input('Ano: '))
 print(f'Sua data de nascimento é: {d}/{m}/{a}')
