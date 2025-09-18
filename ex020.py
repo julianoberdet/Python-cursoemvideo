@@ -1,3 +1,7 @@
+#O mesmo professor do desafio anterior quer sortear a orden de apresentação de
+#trabalho dos aunos. Faça um programa que leia o nome dos quatro alunos e mostre a
+#ordem sorteada:
+
 from random import shuffle
 a = input('Primeiro aluno: ')
 b = input('Segundo aluno: ')
