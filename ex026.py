@@ -3,6 +3,6 @@
 
 frase = str(input('Digite uma Frase: ')).strip().upper()
 print(f'Essa frase contem {frase.count('A')} letras "A"')
-print(f'A primeira vez que ela aparece é no caractere:{frase.find('A')+1}')
-print(f'E a última vez que aparece é no caractere {frase.rfind('A')+1}')
+print(f'A letra A aparece a primeira vez no caractere {frase.find('A')+1}')
+print(f'E a última vez que a letra A aparece é no caractere {frase.rfind('A')+1}')
 
