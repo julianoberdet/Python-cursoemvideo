@@ -3,12 +3,20 @@
 #se o usuário venceu ou perdeu
 
 
-import random
-n = random.randint(0,5)
-print('Vamos sortear um número de 0 a 5')
-print(f'O número escolhido foi: {n}')
-if n >=3:
-    print('Você é o ganhador!! 😃')
+from random import randint
+from time import sleep
+computador = randint(0,5)
+print('-=-' *20)
+print('Vou pensar em número de 0 a 5.Tente advinhar..')
+print('-=-' *20)
+numero = int(input('em que número eu pensei? '))
+print('PROCESSANDO...')
+sleep(3)
+print('E O RESULTADO É...')
+sleep(3)
+print(computador)
+if computador == numero:
+    print('PARABÉNS, você me ganhou 😃')
 else:
-    print('Você perdeu! 😞')
-print('Muito obrigado, até o próximo sorteio!')
+    print(f'GANHEI! Eu pensei no número {computador} e não no {numero} 😞')
+print('Muito obrigado, até a próxima!')
