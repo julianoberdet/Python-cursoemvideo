@@ -3,8 +3,8 @@
 #é de 15%.
 
 salario = float(input('Digite seu salário:R$ '))
-aumento = salario + (salario * 0.10)
-if salario > 1250.00:
-    print(f'Seu salário após o reajuste será de R${aumento:.2f}')
+if salario <= 1250.00:
+    aumento = salario + (salario * 0.15)
 else:
-    print(f'Seu salário após o reajuste vai ficar R${salario + (salario*0.15):.2f}')
+    aumento = salario + (salario * 0.10)
+print(f'Seu salário é {salario:.2f} e após o reajuste vai ficar R${aumento:.2f}')
