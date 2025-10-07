@@ -1,14 +1,23 @@
-#
+#Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com sua idade:
+#--Se ele ainda vai se alistar ao serviço militar;
+#--Se é a hora de se alistar;
+#--Se já passou o tempo do alistamento.
+# Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.
 
-ano = int(input('Qual seu ano de nascimento? '))
-alistar = (2025 - ano)
-if alistar < 17:
-    tempo = 17 - alistar
-    print(f'Você tem {alistar} anos e ainda vai se alistar ao serviço militar.')
-elif alistar == 17:
-    print(f'Você tem {alistar} anos e está na hora de se alistar pro exército!')
-    tempo = 17 - alistar
-elif alistar > 18:
-    print(f'Você tem {alistar} anos e já passou o tempo de alistamento.')
-    tempo = 18 - alistar
-print(f'Falta {tempo} ano para se alistar')
+from datetime import date
+atual = date.today().year
+nasc = int(input('Qual seu ano de nascimento? '))
+idade = atual - nasc
+print(f'Quem nasceu em {nasc} tem {idade} anos em {atual}')
+if idade == 18:
+    print('Você tem que se alistar \033[31mIMEDIATAMENTE\033[m!')
+elif idade < 18:
+    saldo = 18 - idade
+    print(f'Ainda faltam {saldo} anos para o alistamento.')
+    ano = atual + saldo
+    print(f'Seu alistamento será em {ano}')
+else:
+    saldo = idade - 18
+    print(f'Você ja deveria ter se alistado há {saldo} anos!')
+    ano = atual - saldo
+    print(f'Seu alistamento foi em {ano}')
