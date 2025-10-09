@@ -6,15 +6,18 @@ Até 19 anos : JUNIOR
 Até 20 anos : SENIOR
 Acima : MASTER'''
 
+from datetime import date
+atual = date.today().year
 ano = int(input('Em que ano você nasceu? '))
-idade = 2025 - ano
+idade = atual - ano
+print(f'O atleta tem {idade} anos.')
 if idade <= 9:
-    print(f'Você tem {idade} anos classificado como MIRIM')
-elif 9 < idade <= 14:
-    print(f'Você tem {idade} anos e é classificado como INFANTIL')
-elif 14 <= idade <= 19:
-    print(f'Você tem {idade} anos e é classificado como JUNIOR')
-elif idade == 20:
-    print(f'Você tem {idade} anos e é classificado como SENIOR')
+    print('Classificação : MIRIM')
+elif idade <= 14:
+    print('Classificação : INFANTIL')
+elif idade <= 19:
+    print('Classificação : JUNIOR')
+elif idade <= 25:
+    print('Classificação : SENIOR')
 else:
-    print(f'Você tem {idade} anos e é classifcado como MASTER')
+    print('Classificação : MASTER')
