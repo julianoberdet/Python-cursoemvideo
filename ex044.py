@@ -26,7 +26,7 @@ elif pagamento == 4:
     total = valor * 1.20
     parcela = total / pcls
     if pcls >= 3:
-        print(f'{valor:.2f} Parcelado em {pcls}x a parcela será R${parcela:.2f} e o valor total é R${total:.2f}')
+        print(f'Parcelado em {pcls}x a parcela será R${parcela:.2f}.')
     elif pcls < 3:
         print('Opção invalida, tente novamente')
 else:
