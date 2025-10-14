@@ -1,10 +1,12 @@
 #Desenvolva um programa que eia seis números inteiros e mostre a soma apenas daqueles que forem pares
 
-s = 0
-for c in range(0 , 6 , 1):
-    n = int(input('Digite um número: '))
+cont = 0
+soma = 0
+for c in range(1 , 7):
+    n = int(input(f'Digite o {c}º valor: '))
     if n % 2 == 0:
-     s += n
-print(f'A soma dos números pares digitados é {s}')
+      soma += n
+      cont += 1
+print(f'Você informou {cont} números PARES e a soma deles é {soma}')
 
 
