@@ -1,4 +1,21 @@
-masc = 'M'
+#Jeito mais fácil
+sexo = str(input('Qual seu sexo[M/F]? ')).strip().upper()[0]
+while sexo not in 'MmFf':
+    sexo = str(input('caractere inválido, tente novamente[M/F]: ')).strip().upper()[0]
+print(f'Sua opção foi registrada com sucesso!')
+
+
+
+
+
+
+
+
+
+
+
+#Jeito que eu fiz
+'''masc = 'M'
 fem = 'F'
 sexo = ''
 while sexo in 'M' and sexo in 'F':
@@ -7,6 +24,6 @@ while sexo in 'M' and sexo in 'F':
         print('Você digitou errado!')
         novo = str(input('Digite novamente. Sexo[M/F]: '))
 print('FIM')
-
+'''
 
 
