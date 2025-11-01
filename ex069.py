@@ -1,20 +1,20 @@
-maior = homem = mulhermenor = 0
-Sexo = ' '
-usuario = ' '
+tot18 = totH = totM = 0
 while True:
     idade = int(input('Idade: '))
-    sexo = str(input('Sexo[M/F]: ')).upper().strip()[0]
-    usuario = str(input('Quer continuar?[S/N] ')).upper().strip()[0]
-    if usuario in 'Ss':
-        if idade > 18:
-            maior += 1
-        if sexo in 'Mm':
-            homem += 1
-        if sexo in 'Ff':
-            if idade < 20:
-                mulhermenor += 1
-    else:
+    sexo = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Sexo:[M/F] ')).strip().upper()[0]
+    if idade >= 18:
+        tot18 += 1
+    if sexo == 'M':
+        totH += 1
+    if sexo == 'F' and idade < 20:
+        totM += 1
+    usuario = ' '
+    while usuario not in 'SN':
+        usuario = str(input('Quer continuar?[S/N] ')).strip().upper()[0]
+    if usuario == 'N':
         break
-print(f'Foram cadastradas {maior} pessoas com mais de 18 anos')
-print(f'Foram cadastrados {homem} homens.')
-print(f'Foram cadastradas {mulhermenor+1} mulheres com menos de 20 anos')
+print(f'O total de pessoas com mais de 18 anos é {tot18}')
+print(f'Foram cadastrados {totH} homens.')
+print(f'E temos {totM} mulheres com menos de 20 anos.')
