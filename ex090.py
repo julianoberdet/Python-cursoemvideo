@@ -1,18 +1,12 @@
-alunos = {}
-alunos['nome'] = str(input('Nome: '))
-alunos['media'] = float(input(f'Média de {alunos["nome"]}: '))
-print('-=' * 30)
-if alunos['media'] >= 7:
-    alunos['situação'] = 'Aprovado'
-elif 5 <= alunos['media'] < 7:
-    alunos['situação'] = 'Recuperação'
+aluno = {}
+aluno['nome'] = str(input('Nome: '))
+aluno['media'] = float(input(f'Média de {aluno["nome"]}: '))
+if aluno['media'] >= 7:
+    aluno['situação'] = 'Aprovado'
+elif 5 <= aluno['media'] < 7:
+    aluno['situação'] = 'Recuperação'
 else:
-    alunos['situação'] = 'Reprovado'
-for k, v in alunos.items():
-    print(f'- {k} é igual a {v}')
-
-
-
-
-
-
+    aluno['situção'] ='Reprovado'
+print('-=' * 30)
+for k, v in aluno.items():
+    print(f'{k} é igual a {v}')
