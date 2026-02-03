@@ -7,12 +7,12 @@ def leiaInt(msg):
             valor = int(n)
             ok = True
         else:
-            print('\033[1;31mERRO! Digite novamente um número.\033[m')
+            print('\033[1;31mERRO! Digite um número inteiro\033[m')
         if ok:
             break
     return valor
 
 
-# Programa principal
+#Programa principal
 n = leiaInt('Digite um número: ')
 print(f'O número digitado foi {n}')

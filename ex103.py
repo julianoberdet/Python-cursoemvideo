@@ -1,15 +1,15 @@
 def ficha(jog='<desconhecido>',gol=0):
-    print(f'O jogador {jog} fez {gol} gol(s) no campeonato.')
+    print(f'O jogador {jog} fez {gol} gol(s) no campeonato')
 
 
 #Programa principal
 n = str(input('Nome do jogador: '))
 g = str(input('Número de gols: '))
 if g.isnumeric():
-    g = int(g)
+    g =int(g)
 else:
     g = 0
-if not n.strip():
+if n.strip() == '':     # if not n.strip(): mesma coisa
     ficha(gol=g)
 else:
     ficha(n,g)

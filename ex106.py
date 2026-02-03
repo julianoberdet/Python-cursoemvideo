@@ -11,29 +11,30 @@ c = ('\033[m',        #0 - sem cor
 
 
 def ajuda(com):
-    titulo(f'Acessando o manual do \' {com} \' ',4)
+    titulo(f'Acessando o manual do \' {com} \'',4)
     print(c[7],end='')
     help(com)
     print(c[0],end='')
-    sleep(2)
+    sleep(1.5)
 
 
-def titulo(msg,cor=0):
+def titulo(msg,cor):
     tam = len(msg) + 4
-    print(c[cor] , end='')
+    print(c[cor],end='')
     print('~' * tam)
     print(f'  {msg}')
     print('~' * tam)
     print(c[0],end='')
     sleep(1)
 
+
 #Programa principal
 comando = ''
 while True:
-    titulo('SISTEMA DE AJUDA PYhelp',2)
+    titulo('SISTEMA DE AUTO AJUDA PYhelp',2)
     comando = str(input('Biblioteca ou Função > '))
     if comando.upper() == 'FIM':
         break
     else:
         ajuda(comando)
-titulo('ATÉ LOGO', 1)
+titulo('ATÉ LOGO!',1)

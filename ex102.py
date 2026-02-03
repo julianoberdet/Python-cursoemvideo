@@ -1,9 +1,9 @@
 def fatorial(n=1,show=False):
     """
-    ->Calcula o valor fatorial de um número
+    -> Calcular o fatorial de um número
     :param n: O número a ser calculado
-    :param show: (opcional) Mostrar ou não a conta
-    :return: O valor fatorial de um número
+    :param show: (opcional) se quer que apareça o calculo
+    :return: retorna o valor do fatorial
     """
     print('-' * 40)
     m = 1
@@ -11,7 +11,10 @@ def fatorial(n=1,show=False):
         m *= c
         if show:
             print(c,end=' ')
-            print('x' if c > 1 else '=',end=' ')
+            if c > 1:
+                print('x',end=' ')
+            else:
+                print('=',end=' ')
     return m
 
 
